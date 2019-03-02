@@ -1,0 +1,19 @@
+spring:
+  profiles: development
+security.basic.enabled: false
+management.security.enabled: false
+
+---
+kafka: 
+  bootstrap.servers: 127.0.0.1:9092
+  acks: all
+  retries: 1
+  batch.size: 16384
+  linger.ms: 100
+  buffer.memory: 33554432
+  enable.auto.commit: true
+  max.in.flight.requests.per.connection: 1
+  topic: kafkatest
+  enableNotification: true
+server:
+  port: 10999
